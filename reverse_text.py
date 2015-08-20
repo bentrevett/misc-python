@@ -1,10 +1,12 @@
-message = input("Type a message to be reversed: ")
-encrypted = ""
+def reverse_text(string):
+    backwards=""
+    i=len(string)-1
+    while i >= 0:
+        backwards+=string[i]
+        i-=1
+    return backwards
 
-i=len(message)-1
-while i >= 0:
-    encrypted = encrypted + message[i]
-    i=i-1
-
-print(encrypted)
+while True:
+    message = input("Type some text to be reversed: ")
+    print(reverse_text(message))
     
